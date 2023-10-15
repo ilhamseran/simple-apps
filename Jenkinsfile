@@ -16,7 +16,7 @@ pipeline {
 
         stage('Test Apps') {
             steps {
-              sh '''cd apps
+              sh '''cd apps/apps
               npm test
               '''
             }

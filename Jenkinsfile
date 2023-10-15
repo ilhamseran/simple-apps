@@ -12,4 +12,12 @@ pipeline {
             }
         }
     }
+
+    stages {
+        stage('Test Apps') {
+            steps {
+              echo "Test Apps"
+            }
+        }
+    }
 }

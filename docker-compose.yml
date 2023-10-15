@@ -1,6 +1,7 @@
 version: 'v2.21.0'
 services:
   backend:
+    image: ilhamseran/image-ilham
     build: apps/.
     restart: always
     links:

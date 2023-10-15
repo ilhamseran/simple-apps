@@ -25,7 +25,14 @@ pipeline {
 
         stage('Scanning Sonnar') {
             steps {
-              echo "Scanning Sonar"
+              sh '''
+              cd apps
+              sonar-scanner \
+                -Dsonar.projectKey=Simple-Apps \
+                -Dsonar.sources=. \
+                -Dsonar.host.url=http://10.23.0.11:9000 \
+                -Dsonar.login=sqp_acc0bad0193430e8f57f9c75c18bbbe1b189631e
+              '''
             }
         }
 
